@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  background: rgba(2, 6, 23, 0.9);
+  padding: 32px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+}
+
+#progress {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.mode-picker {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hardcore {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  box-shadow: 0 0 20px rgba(220,38,38,.4);
+}
+
+#question {
+  font-size: 1.15rem;
+  margin: 24px 0;
+  min-height: 70px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.answer-btn {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.answer-btn:hover {
+  background: #334155;
+  transform: scale(1.03);
+}
+
+.answer-btn.correct {
+  background: #16a34a;
+}
+
+.answer-btn.wrong {
+  background: #dc2626;
+}
+
+#result {
+  margin-top: 20px;
+}
